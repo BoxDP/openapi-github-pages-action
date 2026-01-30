@@ -46,7 +46,9 @@ else
 
     echo "Fetching API spec file $openApiJsonFilepath from branch $branchToFetchApiSpecFrom"
 
-    apiSpecFetchUri="/repos/$GH_ACTION_REPOSITORY/contents/$openApiJsonFilepath?ref=$branchToFetchApiSpecFrom"
+    #apiSpecFetchUri="/repos/$GH_ACTION_REPOSITORY/contents/$openApiJsonFilepath?ref=$branchToFetchApiSpecFrom"
+    apiSpecFetchUri="/repos/$GITHUB_REPOSITORY/contents/$openApiJsonFilepath?ref=$branchToFetchApiSpecFrom"
+
     echo "Submitting gh api request to endpoint $apiSpecFetchUri"
 
     # Ref: https://docs.github.com/en/rest/repos/contents?apiVersion=2022-11-28#get-repository-content
