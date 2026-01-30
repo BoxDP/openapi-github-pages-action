@@ -40,7 +40,8 @@ runs:
     - name: Fetch generate-docs.sh script
       uses: actions/checkout@v4
       with:
-        repository: msayson/openapi-github-pages-action
+        #repository: msayson/openapi-github-pages-action
+        repository: BoxDP/openapi-github-pages-action
         sparse-checkout: scripts
         path: openapi-github-pages-scripts
     - name: Generate ReDoc API docs
